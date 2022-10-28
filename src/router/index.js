@@ -5,9 +5,18 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/',
-        name: 'home',
-        component: () => import(/* webpackChunkName: "about" */ '../views/HomeView.vue')
+        path: '/dialogs',
+        name: 'dialogs',
+        component: () => import(/* webpackChunkName: "about" */ '../views/DialogVue.vue')
+    },
+    {
+        path: '/messages',
+        name: 'messages',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Messages.vue')
+    },
+    {
+        path: '*',
+        component: () => import(/* webpackChunkName: "about" */ '../views/404.vue')
     },
 ]
 

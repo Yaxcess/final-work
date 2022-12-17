@@ -5,19 +5,24 @@ Vue.use(VueRouter)
 
 const routes = [
     {
-        path: '/dialogs',
-        name: 'dialogs',
-        component: () => import(/* webpackChunkName: "about" */ '../views/DialogVue.vue')
-    },
-    {
-        path: '/messages',
-        name: 'messages',
-        component: () => import(/* webpackChunkName: "about" */ '../views/Messages.vue')
+        path: '/memorycard',
+        name: 'memorycard',
+        component: () => import(/* webpackChunkName: "about" */ '../views/MemoryCardGame.vue')
     },
     {
         path: '*',
         component: () => import(/* webpackChunkName: "about" */ '../views/404.vue')
     },
+    {
+        path: '/Have_Fun',
+        name: 'Have_Fun',
+        component: () => import(/* webpackChunkName: "about" */ '../views/404.vue')
+    },
+    {
+        path: '/',
+        name: '',
+        component: () => import(/* webpackChunkName: "about" */ '../views/Template.vue')
+    }
 ]
 
 const router = new VueRouter({
